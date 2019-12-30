@@ -1,0 +1,4 @@
+com\ex\gateway\gateway\AppProperties.class
+com\ex\gateway\gateway\SimpleFilter.class
+com\ex\gateway\gateway\GatewayApplication.class
+com\ex\gateway\gateway\AppController.class

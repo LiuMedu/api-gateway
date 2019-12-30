@@ -1,0 +1,261 @@
+2019-12-23 11:20:21.437  INFO 243504 --- [main] c.ex.gateway.gateway.GatewayApplication  : No active profile set, falling back to default profiles: default
+2019-12-23 11:20:23.030  WARN 243504 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'hystrix.stream' contains invalid characters, please migrate to a valid format.
+2019-12-23 11:20:23.255  INFO 243504 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a3b0ed90-9d87-364e-b21f-0f162c707f9c
+2019-12-23 11:20:23.644  INFO 243504 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-23 11:20:24.415  INFO 243504 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8686 (http)
+2019-12-23 11:20:24.430  INFO 243504 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-23 11:20:24.431  INFO 243504 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-23 11:20:24.646  INFO 243504 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-23 11:20:24.647  INFO 243504 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3120 ms
+2019-12-23 11:20:24.826  WARN 243504 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-23 11:20:24.827  INFO 243504 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-23 11:20:24.864  INFO 243504 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@af1f113d
+2019-12-23 11:20:25.962  WARN 243504 --- [main] o.s.c.n.a.ArchaiusAutoConfiguration      : No spring.application.name found, defaulting to 'application'
+2019-12-23 11:20:25.991  WARN 243504 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-23 11:20:25.992  INFO 243504 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-23 11:20:26.275  INFO 243504 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-23 11:20:27.656  INFO 243504 --- [main] o.s.c.n.zuul.ZuulFilterInitializer       : Starting filter initializer
+2019-12-23 11:20:27.677  INFO 243504 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-12-23 11:20:27.806  INFO 243504 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8686 (http) with context path ''
+2019-12-23 11:20:28.263  INFO 243504 --- [main] c.ex.gateway.gateway.GatewayApplication  : Started GatewayApplication in 8.908 seconds (JVM running for 9.651)
+2019-12-23 11:21:53.312  INFO 243504 --- [http-nio-8686-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-23 11:21:53.313  INFO 243504 --- [http-nio-8686-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-23 11:21:53.328  INFO 243504 --- [http-nio-8686-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2019-12-23 11:21:53.440  INFO 243504 --- [http-nio-8686-exec-1] com.ex.gateway.gateway.SimpleFilter      :  ***************  Request to port 8686, will get routed to zuul url (zuul.routes.books-app.url=http://localhost:8090) in application.properties file *************** 
+2019-12-23 11:21:53.445  INFO 243504 --- [http-nio-8686-exec-1] com.ex.gateway.gateway.SimpleFilter      : GET request to http://localhost:8686/books-app/available
+2019-12-23 11:22:42.918  INFO 243504 --- [http-nio-8686-exec-2] com.ex.gateway.gateway.SimpleFilter      :  ***************  Request to port 8686, will get routed to zuul url (zuul.routes.books-app.url=http://localhost:8090) in application.properties file *************** 
+2019-12-23 11:22:42.919  INFO 243504 --- [http-nio-8686-exec-2] com.ex.gateway.gateway.SimpleFilter      : GET request to http://localhost:8686/books-app/checked-out
+2019-12-23 11:23:03.733  INFO 243504 --- [http-nio-8686-exec-3] com.ex.gateway.gateway.SimpleFilter      :  ***************  Request to port 8686, will get routed to zuul url (zuul.routes.books-app.url=http://localhost:8090) in application.properties file *************** 
+2019-12-23 11:23:03.733  INFO 243504 --- [http-nio-8686-exec-3] com.ex.gateway.gateway.SimpleFilter      : GET request to http://localhost:8686/books-app/available
+2019-12-23 11:25:41.281  INFO 243504 --- [SpringContextShutdownHook] o.s.c.n.zuul.ZuulFilterInitializer       : Stopping filter initializer
+2019-12-23 11:25:41.303  INFO 243504 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-23 15:02:09.708  INFO 269444 --- [main] c.ex.gateway.gateway.GatewayApplication  : No active profile set, falling back to default profiles: default
+2019-12-23 15:02:11.169  WARN 269444 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'hystrix.stream' contains invalid characters, please migrate to a valid format.
+2019-12-23 15:02:11.405  INFO 269444 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a3b0ed90-9d87-364e-b21f-0f162c707f9c
+2019-12-23 15:02:11.735  INFO 269444 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-23 15:02:12.535  INFO 269444 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8686 (http)
+2019-12-23 15:02:12.556  INFO 269444 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-23 15:02:12.557  INFO 269444 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-23 15:02:12.809  INFO 269444 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-23 15:02:12.809  INFO 269444 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3062 ms
+2019-12-23 15:02:13.043  WARN 269444 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-23 15:02:13.043  INFO 269444 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-23 15:02:13.068  INFO 269444 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@e1718a4c
+2019-12-23 15:02:14.132  WARN 269444 --- [main] o.s.c.n.a.ArchaiusAutoConfiguration      : No spring.application.name found, defaulting to 'application'
+2019-12-23 15:02:14.134  WARN 269444 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-23 15:02:14.135  INFO 269444 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-23 15:02:14.469  INFO 269444 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-23 15:02:15.833  INFO 269444 --- [main] o.s.c.n.zuul.ZuulFilterInitializer       : Starting filter initializer
+2019-12-23 15:02:15.859  INFO 269444 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-12-23 15:02:15.996  INFO 269444 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8686 (http) with context path ''
+2019-12-23 15:02:16.466  INFO 269444 --- [main] c.ex.gateway.gateway.GatewayApplication  : Started GatewayApplication in 9.202 seconds (JVM running for 10.237)
+2019-12-23 15:04:22.652  INFO 269444 --- [http-nio-8686-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-23 15:04:22.653  INFO 269444 --- [http-nio-8686-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-23 15:04:22.674  INFO 269444 --- [http-nio-8686-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 20 ms
+2019-12-23 15:04:22.798  INFO 269444 --- [http-nio-8686-exec-1] com.ex.gateway.gateway.SimpleFilter      :  ***************  Request to port 8686, will get routed to zuul url (zuul.routes.books-app.url=http://localhost:8090) in application.properties file *************** 
+2019-12-23 15:04:22.802  INFO 269444 --- [http-nio-8686-exec-1] com.ex.gateway.gateway.SimpleFilter      : GET request to http://localhost:8686/books-app/available
+2019-12-23 15:04:24.916  WARN 269444 --- [http-nio-8686-exec-1] o.s.c.n.z.filters.post.SendErrorFilter   : Error during filtering
+
+com.netflix.zuul.exception.ZuulException: Forwarding error
+	at org.springframework.cloud.netflix.zuul.filters.route.SimpleHostRoutingFilter.handleException(SimpleHostRoutingFilter.java:261) ~[spring-cloud-netflix-zuul-2.2.0.RELEASE.jar:2.2.0.RELEASE]
+	at org.springframework.cloud.netflix.zuul.filters.route.SimpleHostRoutingFilter.run(SimpleHostRoutingFilter.java:241) ~[spring-cloud-netflix-zuul-2.2.0.RELEASE.jar:2.2.0.RELEASE]
+	at com.netflix.zuul.ZuulFilter.runFilter(ZuulFilter.java:117) ~[zuul-core-1.3.1.jar:1.3.1]
+	at com.netflix.zuul.FilterProcessor.processZuulFilter(FilterProcessor.java:193) ~[zuul-core-1.3.1.jar:1.3.1]
+	at com.netflix.zuul.FilterProcessor.runFilters(FilterProcessor.java:157) ~[zuul-core-1.3.1.jar:1.3.1]
+	at com.netflix.zuul.FilterProcessor.route(FilterProcessor.java:118) ~[zuul-core-1.3.1.jar:1.3.1]
+	at com.netflix.zuul.ZuulRunner.route(ZuulRunner.java:96) ~[zuul-core-1.3.1.jar:1.3.1]
+	at com.netflix.zuul.http.ZuulServlet.route(ZuulServlet.java:116) ~[zuul-core-1.3.1.jar:1.3.1]
+	at com.netflix.zuul.http.ZuulServlet.service(ZuulServlet.java:81) ~[zuul-core-1.3.1.jar:1.3.1]
+	at org.springframework.web.servlet.mvc.ServletWrappingController.handleRequestInternal(ServletWrappingController.java:166) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.cloud.netflix.zuul.web.ZuulController.handleRequest(ZuulController.java:45) [spring-cloud-netflix-zuul-2.2.0.RELEASE.jar:2.2.0.RELEASE]
+	at org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter.handle(SimpleControllerHandlerAdapter.java:52) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:108) [spring-boot-actuator-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_202]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_202]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at java.lang.Thread.run(Thread.java:813) [na:1.8.0_202]
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to localhost:8090 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156) ~[httpclient-4.5.10.jar:4.5.10]
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:374) ~[httpclient-4.5.10.jar:4.5.10]
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393) ~[httpclient-4.5.10.jar:4.5.10]
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236) ~[httpclient-4.5.10.jar:4.5.10]
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186) ~[httpclient-4.5.10.jar:4.5.10]
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89) ~[httpclient-4.5.10.jar:4.5.10]
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185) ~[httpclient-4.5.10.jar:4.5.10]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118) ~[httpclient-4.5.10.jar:4.5.10]
+	at org.springframework.cloud.netflix.zuul.filters.route.SimpleHostRoutingFilter.forwardRequest(SimpleHostRoutingFilter.java:422) ~[spring-cloud-netflix-zuul-2.2.0.RELEASE.jar:2.2.0.RELEASE]
+	at org.springframework.cloud.netflix.zuul.filters.route.SimpleHostRoutingFilter.forward(SimpleHostRoutingFilter.java:341) ~[spring-cloud-netflix-zuul-2.2.0.RELEASE.jar:2.2.0.RELEASE]
+	at org.springframework.cloud.netflix.zuul.filters.route.SimpleHostRoutingFilter.run(SimpleHostRoutingFilter.java:236) ~[spring-cloud-netflix-zuul-2.2.0.RELEASE.jar:2.2.0.RELEASE]
+	... 54 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_202]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_202]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_202]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_202]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_202]
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75) ~[httpclient-4.5.10.jar:4.5.10]
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142) ~[httpclient-4.5.10.jar:4.5.10]
+	... 64 common frames omitted
+
+2019-12-23 15:06:02.837  INFO 269444 --- [http-nio-8686-exec-2] com.ex.gateway.gateway.SimpleFilter      :  ***************  Request to port 8686, will get routed to zuul url (zuul.routes.books-app.url=http://localhost:8090) in application.properties file *************** 
+2019-12-23 15:06:02.838  INFO 269444 --- [http-nio-8686-exec-2] com.ex.gateway.gateway.SimpleFilter      : GET request to http://localhost:8686/books-app/available
+2019-12-23 15:06:17.226  INFO 269444 --- [http-nio-8686-exec-3] com.ex.gateway.gateway.SimpleFilter      :  ***************  Request to port 8686, will get routed to zuul url (zuul.routes.books-app.url=http://localhost:8090) in application.properties file *************** 
+2019-12-23 15:06:17.227  INFO 269444 --- [http-nio-8686-exec-3] com.ex.gateway.gateway.SimpleFilter      : GET request to http://localhost:8686/books-app/checked-out
+2019-12-23 15:09:12.711  INFO 269444 --- [SpringContextShutdownHook] o.s.c.n.zuul.ZuulFilterInitializer       : Stopping filter initializer
+2019-12-23 15:09:12.727  INFO 269444 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-23 15:11:31.544  INFO 249996 --- [main] c.ex.gateway.gateway.GatewayApplication  : No active profile set, falling back to default profiles: default
+2019-12-23 15:11:33.086  WARN 249996 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'hystrix.stream' contains invalid characters, please migrate to a valid format.
+2019-12-23 15:11:33.344  INFO 249996 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a3b0ed90-9d87-364e-b21f-0f162c707f9c
+2019-12-23 15:11:33.709  INFO 249996 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-23 15:11:34.494  INFO 249996 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8686 (http)
+2019-12-23 15:11:34.507  INFO 249996 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-23 15:11:34.508  INFO 249996 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-23 15:11:34.722  INFO 249996 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-23 15:11:34.723  INFO 249996 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3091 ms
+2019-12-23 15:11:34.895  WARN 249996 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-23 15:11:34.896  INFO 249996 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-23 15:11:34.910  INFO 249996 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@a94fbea3
+2019-12-23 15:11:35.830  WARN 249996 --- [main] o.s.c.n.a.ArchaiusAutoConfiguration      : No spring.application.name found, defaulting to 'application'
+2019-12-23 15:11:35.832  WARN 249996 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-23 15:11:35.832  INFO 249996 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-23 15:11:36.109  INFO 249996 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-23 15:11:37.362  INFO 249996 --- [main] o.s.c.n.zuul.ZuulFilterInitializer       : Starting filter initializer
+2019-12-23 15:11:37.382  INFO 249996 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-12-23 15:11:37.505  INFO 249996 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8686 (http) with context path ''
+2019-12-23 15:11:37.974  INFO 249996 --- [main] c.ex.gateway.gateway.GatewayApplication  : Started GatewayApplication in 8.865 seconds (JVM running for 9.779)
+2019-12-23 15:12:24.707  INFO 249996 --- [http-nio-8686-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-23 15:12:24.708  INFO 249996 --- [http-nio-8686-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-23 15:12:24.732  INFO 249996 --- [http-nio-8686-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 22 ms
+2019-12-23 15:12:24.839  INFO 249996 --- [http-nio-8686-exec-1] com.ex.gateway.gateway.SimpleFilter      :  ***************  Request to port 8686, will get routed to zuul url (zuul.routes.books-app.url=http://localhost:8090) in application.properties file *************** 
+2019-12-23 15:12:24.841  INFO 249996 --- [http-nio-8686-exec-1] com.ex.gateway.gateway.SimpleFilter      : GET request to http://localhost:8686/itcares-app/version
+2019-12-23 15:12:26.920  WARN 249996 --- [http-nio-8686-exec-1] o.s.c.n.z.filters.post.SendErrorFilter   : Error during filtering
+
+com.netflix.zuul.exception.ZuulException: Forwarding error
+	at org.springframework.cloud.netflix.zuul.filters.route.SimpleHostRoutingFilter.handleException(SimpleHostRoutingFilter.java:261) ~[spring-cloud-netflix-zuul-2.2.0.RELEASE.jar:2.2.0.RELEASE]
+	at org.springframework.cloud.netflix.zuul.filters.route.SimpleHostRoutingFilter.run(SimpleHostRoutingFilter.java:241) ~[spring-cloud-netflix-zuul-2.2.0.RELEASE.jar:2.2.0.RELEASE]
+	at com.netflix.zuul.ZuulFilter.runFilter(ZuulFilter.java:117) ~[zuul-core-1.3.1.jar:1.3.1]
+	at com.netflix.zuul.FilterProcessor.processZuulFilter(FilterProcessor.java:193) ~[zuul-core-1.3.1.jar:1.3.1]
+	at com.netflix.zuul.FilterProcessor.runFilters(FilterProcessor.java:157) ~[zuul-core-1.3.1.jar:1.3.1]
+	at com.netflix.zuul.FilterProcessor.route(FilterProcessor.java:118) ~[zuul-core-1.3.1.jar:1.3.1]
+	at com.netflix.zuul.ZuulRunner.route(ZuulRunner.java:96) ~[zuul-core-1.3.1.jar:1.3.1]
+	at com.netflix.zuul.http.ZuulServlet.route(ZuulServlet.java:116) ~[zuul-core-1.3.1.jar:1.3.1]
+	at com.netflix.zuul.http.ZuulServlet.service(ZuulServlet.java:81) ~[zuul-core-1.3.1.jar:1.3.1]
+	at org.springframework.web.servlet.mvc.ServletWrappingController.handleRequestInternal(ServletWrappingController.java:166) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.cloud.netflix.zuul.web.ZuulController.handleRequest(ZuulController.java:45) [spring-cloud-netflix-zuul-2.2.0.RELEASE.jar:2.2.0.RELEASE]
+	at org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter.handle(SimpleControllerHandlerAdapter.java:52) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:108) [spring-boot-actuator-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_202]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_202]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at java.lang.Thread.run(Thread.java:813) [na:1.8.0_202]
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to localhost:8181 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156) ~[httpclient-4.5.10.jar:4.5.10]
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:374) ~[httpclient-4.5.10.jar:4.5.10]
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393) ~[httpclient-4.5.10.jar:4.5.10]
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236) ~[httpclient-4.5.10.jar:4.5.10]
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186) ~[httpclient-4.5.10.jar:4.5.10]
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89) ~[httpclient-4.5.10.jar:4.5.10]
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185) ~[httpclient-4.5.10.jar:4.5.10]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118) ~[httpclient-4.5.10.jar:4.5.10]
+	at org.springframework.cloud.netflix.zuul.filters.route.SimpleHostRoutingFilter.forwardRequest(SimpleHostRoutingFilter.java:422) ~[spring-cloud-netflix-zuul-2.2.0.RELEASE.jar:2.2.0.RELEASE]
+	at org.springframework.cloud.netflix.zuul.filters.route.SimpleHostRoutingFilter.forward(SimpleHostRoutingFilter.java:341) ~[spring-cloud-netflix-zuul-2.2.0.RELEASE.jar:2.2.0.RELEASE]
+	at org.springframework.cloud.netflix.zuul.filters.route.SimpleHostRoutingFilter.run(SimpleHostRoutingFilter.java:236) ~[spring-cloud-netflix-zuul-2.2.0.RELEASE.jar:2.2.0.RELEASE]
+	... 54 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_202]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_202]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_202]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_202]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_202]
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75) ~[httpclient-4.5.10.jar:4.5.10]
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142) ~[httpclient-4.5.10.jar:4.5.10]
+	... 64 common frames omitted
+
+2019-12-23 15:14:22.685  INFO 249996 --- [http-nio-8686-exec-2] com.ex.gateway.gateway.SimpleFilter      :  ***************  Request to port 8686, will get routed to zuul url (zuul.routes.books-app.url=http://localhost:8090) in application.properties file *************** 
+2019-12-23 15:14:22.686  INFO 249996 --- [http-nio-8686-exec-2] com.ex.gateway.gateway.SimpleFilter      : GET request to http://localhost:8686/itcares-app/version
+2019-12-23 15:14:41.711  INFO 249996 --- [SpringContextShutdownHook] o.s.c.n.zuul.ZuulFilterInitializer       : Stopping filter initializer
+2019-12-23 15:14:41.725  INFO 249996 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
